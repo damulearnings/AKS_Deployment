@@ -153,6 +153,7 @@ resource "kubernetes_namespace" "mulesoft" {
   }
 }
 
+
 resource "helm_release" "twistlock_defender" {
   name       = "twistlock-defender"
   repository = "https://paloaltonetworks.github.io/twistlock-defender-helm"
