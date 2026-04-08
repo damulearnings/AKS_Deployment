@@ -177,6 +177,21 @@ resource "helm_release" "twistlock_defender" {
  #   name  = "token"
  #   value = var.twistlock_token # Store this in GitHub Secrets
  # }
+
+  set {
+    name  = "defender.image"
+    value = "your-private-registry/twistlock/defender:latest"
+  }
+
+  set {
+    name  = "defender.clusterAddress"
+    value = "https://your-console-url:8083"
+  }
+
+  set {
+    name  = "defender.token"
+    value = "your-generated-token"
+  } 
 }
 
 
