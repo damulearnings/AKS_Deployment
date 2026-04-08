@@ -156,7 +156,7 @@ resource "kubernetes_namespace" "mulesoft" {
 
 resource "helm_release" "twistlock_defender" {
   name       = "twistlock-defender"
-  repository = "https://github.com/PaloAltoNetworks/twistlock-defender-helm/blob/main/twistlock-defender/Chart.yaml"
+  repository = "https://paloaltonetworks.github.io/twistlock-defender-helm"
   chart      = "twistlock-defender"
   namespace  = "twistlock"
   create_namespace = true
